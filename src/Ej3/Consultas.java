@@ -21,13 +21,18 @@ public class Consultas {
         double total = 0;
         HashSet<Double> listPeso = new HashSet<>();
         ArrayList<String> listNombre = new ArrayList<>();
+ArrayList<String> listNombawdre = new ArrayList<>();
+
+ArrayList<String> listNoasdasmbre = new ArrayList<>();
+
+
 
         try {
             //se incluye JDBC
             Class.forName("com.mysql.cj.jdbc.Driver");
             //se conecta
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/pokemon", "root", "");
-            //sesión
+            //sesi n
             Statement stmt = conn.createStatement();
             //resultSet
             ResultSet rs = stmt.executeQuery("SELECT * FROM pokemon");
